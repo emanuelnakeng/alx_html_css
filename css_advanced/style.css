@@ -1,7 +1,399 @@
-root {
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
 	--accent_color: #c271ff;
-	--white_color: #fff;
-	--black_color: #000;
-	--light_black_color: #071629;
-	/* --primary_font: 'source' */
+	--white_color: #ffffff;
+	--lightgray_color: #ffffff77;
+	--dark_color: #071629;
+	--shadow_color: #0000007c;
+	--darkgray_color: #0716297a;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Source Code Pro', monospace;
+	scroll-behavior: smooth;
+}
+
+.hero_container {
+	background-image: url('./assets/Object.png');
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 80px;
+}
+
+header nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	top: 30px;
+	left: 0px;
+	right: 0px;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	column-gap: 40px;
+}
+
+nav li {
+	list-style-type: none;
+}
+
+nav li a {
+	text-decoration: none;
+	font-size: 0.9rem;
+	color: var(--white_color);
+	font-weight: 500;
+}
+
+nav li a:hover {
+	padding-bottom: 4px;
+	border-bottom: 1px solid var(--white_color);
+	transition: all 0.3s ease-in-out;
+}
+
+main {
+	position: relative;
+	margin-top: 40px;
+}
+
+.hero_innerContainer {
+	text-align: center;
+}
+
+.hero_innerContainer h1 {
+	font-size: 120px;
+	color: var(--white_color);
+	padding: 10px 0px;
+}
+
+.hero_innerContainer span {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0 20px;
+	color: var(--white_color);
+}
+
+.hero_innerContainer button {
+	font-weight: 600;
+	display: block;
+	margin: 60px auto;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: var(--white_color);
+	background-color: var(--accent_color);
+	box-shadow: 2px 0 10px var(--shadow_color);
+	border: none;
+}
+
+.hero_innerContainer button:hover {
+	cursor: pointer;
+	background-color: var(--white_color);
+	color: var(--accent_color);
+	transition: all 0.3s ease-in-out;
+}
+
+.prosContainer {
+	margin-top: 160px;
+}
+
+.prosContainer h2 {
+	color: var(--white_color);
+	font-size: 32px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.prosContainer h2 span {
+	color: var(--accent_color);
+	font-weight: 600;
+}
+
+.pros {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 50px;
+	column-gap: 50px;
+}
+
+.pro {
+	text-align: center;
+	color: var(--white_color);
+}
+
+.pro p {
+	font-style: italic;
+	font-size: 16px;
+}
+
+.pro img {
+	border-radius: 100%;
+}
+
+.testimonial {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--accent_color);
+	padding: 100px;
+	font-size: 22px;
+	color: var(--white_color);
+	column-gap: 60px;
+}
+
+.testimonial blockquote {
+	width: 700px;
+	margin-bottom: 20px;
+}
+
+.testimonial p {
+	font-style: italic;
+}
+
+.tutorial-section {
+	margin: 100px 0;
+}
+
+.tutorial-section h2 {
+	text-align: center;
+	font-weight: 300;
+	font-size: 2rem;
+}
+
+.tutorial-section span {
+	font-weight: bold;
+	color: var(--accent_color);
+}
+
+.tutorials {
+	display: flex;
+	flex-direction: row;
+	column-gap: 40px;
+	justify-content: center;
+}
+
+.tut {
+	width: 255px;
+}
+
+.play {
+	position: relative;
+	top: 35%;
+	left: 35%;
+}
+
+.tut h3 {
+	text-align: left;
+	font-size: 1.1rem;
+	line-height: 2rem;
+}
+
+.tut p {
+	text-align: left;
+	color: var(--darkgray_color);
+	font-size: 14px;
+}
+
+.person {
+	display: flex;
+	align-items: center;
+	margin: 10px 5px;
+	column-gap: 20px;
+}
+
+.person h4 {
+	font-size: 14px;
+	color: var(--accent_color);
+}
+
+.person img {
+	width: 8%;
+}
+
+.rating_container {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.rating_container p {
+	color: var(--accent_color);
+	text-align: right;
+}
+
+.stars {
+	display: flex;
+	align-items: center;
+	padding: 0;
+}
+
+.fa-solid {
+	color: var(--accent_color);
+	margin: 0 2px;
+}
+
+.last {
+	color: var(--darkgray_color);
+}
+
+.membership_container {
+	background-color: var(--dark_color);
+	padding: 50px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 48px;
+}
+
+.memberships {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	column-gap: 40px;
+}
+
+.membership_container button {
+	font-weight: bold;
+	display: block;
+	margin-top: 40px;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: var(--white_color);
+	background-color: var(--accent_color);
+	box-shadow: 2px 0 10px var(--shadow_color);
+	border: none;
+}
+
+.membership {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 220px;
+}
+
+.membership_container button:hover {
+	cursor: pointer;
+	background-color: var(--white_color);
+	color: var(--accent_color);
+	transition: all 0.3s ease-in-out;
+}
+
+.membership h3 {
+	color: var(--white_color);
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+.membership p {
+	color: var(--white_color);
+	font-size: 14px;
+}
+
+.membership_container span {
+	color: var(--accent_color);
+	font-weight: 600;
+}
+
+.membership_container h2 {
+	font-size: 2rem;
+	font-weight: 300;
+	color: var(--white_color);
+}
+
+.faq_container {
+	margin: 100px 0;
+}
+
+.faq_container h2 {
+	font-size: 4rem;
+	text-align: center;
+	font-weight: 300;
+	color: var(--dark_color);
+}
+
+.questions {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	margin-top: 40px;
+	row-gap: 80px;
+	width: 80%;
+}
+
+.question {
+	width: 34%;
+}
+
+.question h3 {
+	font-size: 1rem;
+	color: var(--dark_color);
+}
+
+.answer {
+	font-size: 0.8rem;
+	color: var(--darkgray_color);
+	margin-top: 40px;
+	width: 80%;
+	line-height: 1.4rem;
+}
+
+.asked-questions h3 {
+	font-size: 16px;
+	margin: 30px 0;
+}
+
+footer {
+	background-color: var(--dark_color);
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+
+.footer_innerContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 40px;
+}
+
+.footer_detailContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.fa-brands {
+	font-size: 25px;
+	color: var(--white_color);
+	margin: 0 10px;
+}
+
+.fa-brands:hover {
+	color: var(--accent_color);
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+footer p {
+	text-align: center;
+	color: var(--lightgray_color);
+	padding: 20px 0;
 }
